@@ -1,6 +1,14 @@
+#!/usr/bin/python3
+"""
+Function that queries the Reddit API and returns
+the number of subscribers for a given subreddit.
+"""
+
 import requests
 
 def top_ten(subreddit):
+    """
+    Top ten function"""
     # Set a custom User-Agent to avoid Too Many Requests errors
     u_agent = 'Mozilla/5.0'
 

@@ -1,6 +1,13 @@
+#!/usr/bin/python3
+"""
+Function that queries the Reddit API and returns
+the number of subscribers for a given subreddit.
+"""
 import requests
 
 def print_keyword_counts(counts):
+    """
+    Print Fuction"""
     # Sort the counts by keyword and count
     sorted_counts = sorted(counts.items(), key=lambda x: (-x[1], x[0]))
 
@@ -9,6 +16,8 @@ def print_keyword_counts(counts):
         print(f'{keyword}: {count}')
 
 def count_words(subreddit, word_list, after=None, counts=None):
+    """
+    Recurse Fuction"""
     # Set a custom User-Agent to avoid Too Many Requests errors
     u_agent = 'Mozilla/5.0'
     headers = {

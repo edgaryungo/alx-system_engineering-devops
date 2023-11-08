@@ -1,6 +1,13 @@
+#!/usr/bin/python3
+"""
+Function that queries the Reddit API and returns
+the number of subscribers for a given subreddit.
+"""
 import requests
 
 def recurse(subreddit, hot_list=None, after=None):
+    """
+    Recursive funtion"""
     # Set a custom User-Agent to avoid Too Many Requests errors
     u_agent = 'Mozilla/5.0'
     headers = {
